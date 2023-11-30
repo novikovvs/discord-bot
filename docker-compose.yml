@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   discord:
+     platform: linux/amd64
      image: highjin/discord-bot
      env_file:
       - .env
