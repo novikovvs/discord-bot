@@ -1,11 +1,8 @@
-ARG GO_VERSION
-ARG ALPINE_VERSION
-
 FROM golang:1.19-alpine3.15 as build
 
 WORKDIR /app
 
-COPY ./project .
+COPY ./src .
 
 RUN go mod vendor
 
