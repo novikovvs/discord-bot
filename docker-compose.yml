@@ -7,4 +7,4 @@ services:
      env_file:
       - .env
      volumes:
-      - ./project/jsons/:/app/jsons/champions.json
+      - ./project/jsons/:/app/jsons/
