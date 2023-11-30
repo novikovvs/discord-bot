@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  app:
+    image: highjin/discord-bot:latest
+    environment:
+      - CHAMPIONS_LIST_PATH=
+      - GUILD_ID=qwr
+      - BOT_TOKEN=qwr
+      - APP_ID=qwtqwt
+
+    volumes:
+      - ./src/jsons/:/app/jsons/
+    networks:
+      - local
+
+networks:
+  local:
+    name: local
+    external: false
