@@ -17,11 +17,10 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-// Bot parameters
 var (
-	GuildID        = flag.String("guild", "1071539200932978880", "Test guild ID")
-	BotToken       = flag.String("token", "MTE3OTE0MDYyMDg1ODcwNzk3OQ.GwNX1j.YafnHKEmlNeHZiQQHb1np16ZUgbL5jIR1C2mYs", "Bot access token")
-	AppID          = flag.String("app", "1179140620858707979", "Application ID")
+	GuildID        = flag.String("guild", os.Getenv("GUILD_ID"), "Test guild ID")
+	BotToken       = flag.String("token", os.Getenv("BOT_TOKEN"), "Bot access token")
+	AppID          = flag.String("app", os.Getenv("APP_ID"), "Application ID")
 	Cleanup        = flag.Bool("cleanup", true, "Cleanup of commands")
 	RemoveCommands = flag.Bool("rmcmd", true, "Remove all commandsInline after shutdowning or not")
 	characters     []structs.Character
