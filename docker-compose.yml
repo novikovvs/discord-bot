@@ -6,7 +6,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./src/jsons/:/app/jsons/
+      - ./project/jsons/:/app/jsons/champions.json
     networks:
       - local
 
