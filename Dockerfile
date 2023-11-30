@@ -5,7 +5,7 @@ FROM golang:1.19-alpine3.15 as build
 
 WORKDIR /app
 
-COPY ./src .
+COPY ./project .
 
 RUN go mod vendor
 
