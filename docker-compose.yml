@@ -1,16 +1,9 @@
 version: "3.9"
 
 services:
-  app:
-    image: highjin/discord-bot:latest
-    env_file:
+  discord:
+     image: highjin/discord-bot
+     env_file:
       - .env
-    volumes:
+     volumes:
       - ./project/jsons/:/app/jsons/champions.json
-    networks:
-      - local
-
-networks:
-  local:
-    name: local
-    external: false
